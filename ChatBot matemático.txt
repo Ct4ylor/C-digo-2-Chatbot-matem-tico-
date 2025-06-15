@@ -1,0 +1,19 @@
+print("Hola, soy BotPy. Escribe 'salir' para terminar.")
+
+while True:
+    mensaje = input("Tú: ").lower()
+
+    if mensaje == "hola":
+        print("BotPy: ¡Hola! ¿Cómo estás?")
+    elif mensaje == "bien":
+        print("BotPy: Me alegro. ¿En qué te puedo ayudar?")
+    elif mensaje == "adiós" or mensaje == "salir":
+        print("BotPy: ¡Hasta luego!")
+        break
+    else:
+        try:
+            # Intenta evaluar si es una operación matemática
+            resultado = eval(mensaje)
+            print(f"BotPy: El resultado es {resultado}")
+        except:
+            print("BotPy: No entendí eso.")
